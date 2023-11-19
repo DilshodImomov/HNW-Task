@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    font-family: Inter;
+}
+
+aside {
+    /* max-width: 360px; */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 21px 0px;
+    align-items: flex-start;
+}
+aside h1 {
+    align-self: center;
+    width: 149px;
+    height: 41px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 50px;
+    /* margin-top: 21px; */
+}   
+
+aside .navBlock {
+    display: flex;
+    align-items: center;
+    color: #727E8E;
+    text-align: left;
+    width: 80%;
+    min-width: 220px;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+aside .navBlock p {
+    margin: 0;
+    margin-left: 20px;
+}
+
+aside .navBlock .dropdown {
+    margin-left: auto;
+}
+
+aside .navBlock.active {
+    color: #5972A9;
+    border-left: 3px solid #5972A9;
+}
+aside .navBlock.active svg path {
+    stroke: #5972A9;
+}
+aside .navBlock.active svg {
+    margin-left: 34px;
+}
+
+
+aside .navBlock svg {
+    margin-left: 37px;
+    min-width: 23px;
+    min-height: 23px;
+}
+
+
+aside footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    text-align: center;
+}
+
+aside footer a {
+    color: #5972A9;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+aside footer p {
+    font-size: 12px;
+    color: #727E8E;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    padding-left: 0;
+}
+
+button {
+    margin-right: 10px;
+}
+
+header .headline {
+    margin-right: auto;
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+header .entity {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0px 30px;
+    border-right: 1px solid #D0D6DE;
+    max-height: 40px;
+    color: #99A5B6;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+header .globe {
+    padding: 20px;
+    border-right: 1px solid #D0D6DE;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+header .profile {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.about p {
+    max-width: 40%;
+    min-width: 510px;
+    color: #99A5B6;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+}
+
+main .myContainer {
+    margin: 40px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    
+}
+
+main .myContainer .textBlock {
+    margin: 15px;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+}
+
+.chartBlock {
+    border-radius: 8px;
+    background: #EFF1F4;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    z-index: -10;
+    margin-bottom: 15px;
+}
+
+.sliders {
+    display: flex;
+    gap: 3vw;
+    width: fit-content;
+    border-right: 1px solid #D0D6DE;
+    padding: 30px;
+}
+
+.rangeDiv p {
+    color: #727E8E;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.sliderBox {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="range"] {
+    -webkit-appearance: slider-vertical;
+    appearance:slider-vertical;
+    width: 7px;
+    height: 218px;
+    outline: none;
+    border-radius: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: slider-vertical;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #15DD89;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: slider-vertical;
+    cursor: pointer;
+}
+
+.rangeList {
+    display: flex;
+    flex-direction: column-reverse; 
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.rangeList.level strong {
+    margin-right: 2em;
+}
+
+.chart {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.semi-chart {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+    box-sizing: content-box;
+    width: 360px;
+    height: 180px;
+}
+
+.semi-chart > * {
+    box-sizing: content-box;
+}
+
+.no-semi-circle {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    border-radius: 26px 26px 0 0;
+    border: 1px solid white;
+    border-bottom: none;
+    background: #EFF1F4;
+    z-index: 1;
+    left: 155px;
+}
+
+.semi-circle {
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    border-radius: 61px 61px 0 0;
+    border: 1px solid white;
+    background: white;
+}
+
+.leftSlice {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    border-radius: 180px 180px 0 0;
+    clip-path: polygon(calc(50% - 1px) 100%, 0% 100%, 0% 0%, calc(20% - 1px) 0%);
+    background: linear-gradient(0deg, #D1D6E1 0%, #D1D6E1 100%), #C8C8C8;
+}
+.middleSlice {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    border-radius: 180px 180px 0 0;
+    clip-path: polygon(50% 100%, 20% 0%, 50% 0%, 80% 0%);
+    background: linear-gradient(0deg, #D1D6E1 0%, #D1D6E1 100%), #C8C8C8;
+}
+
+.rightSlice {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    border-radius: 180px 180px 0 0;
+    clip-path: polygon(calc(50% + 1px) 100%, 100% 100%, 100% 0%, calc(80% + 1px) 0%);
+    background: linear-gradient(0deg, #D1D6E1 0%, #D1D6E1 100%), #C8C8C8;
+}
+
+.activeSlice {
+    background: #5972A9;
+}
+.changingSlice {
+    background: #B1C1E5;
+}
+
+.semi-circle.layer1 {
+    left: 120px;
+}
+
+.semi-circle.layer2 {
+    width: 200px;
+    height: 100px;
+    border-radius: 101px 101px 0 0;
+    left: 80px;
+    z-index: -1;
+}
+
+.leftSlice.layer2, .middleSlice.layer2, .rightSlice.layer2 {
+    width: 200px;
+    height: 100px;
+}
+.semi-circle.layer3 {
+    width: 280px;
+    height: 140px;
+    border-radius: 141px 141px 0 0;
+    left: 40px;
+    z-index: -2;
+}
+
+.leftSlice.layer3, .middleSlice.layer3, .rightSlice.layer3 {
+    width: 280px;
+    height: 140px;
+}
+.semi-circle.layer4 {
+    width: 360px;
+    height: 180px;
+    border-radius: 181px 181px 0 0;
+    left: 0px;
+    z-index: -3;
+}
+
+.leftSlice.layer4, .middleSlice.layer4, .rightSlice.layer4 {
+    width: 360px;
+    height: 180px;
+}
+
+.notesBlock {
+    border-radius: 8px;
+    background: #EFF1F4;
+    padding: 28px 40px;
+}
+
+.notesBlock .subheading {
+    color: #5972A9;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 7px;
+}
+
+.notesBlock .heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 18px;
+}
+
+.notesBlock .text {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    margin: 0;
+}
+
+.myPagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myPagination .previous, .myPagination .next {
+    display: flex;
+    align-items: center;
+    color: #727E8E;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.myPagination .pages {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.myPagination .pages p {
+    width: 30px;
+    height: 30px;
+    color: #727E8E;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 100%;
+    margin: 0;
+}
+
+.myPagination .pages p.active {
+    background-color: #5972A9;
+    color: white;
+}
+
+.offcanvas-lg.offcanvas-start {
+    width: 300px;
+}
+
+
+@media (max-width: 1210px) {
+    .rangeList span {
+        display: flex;
+        flex-direction: column;
+        /* gap: 3px; */
+    }
+    .rangeList {
+        gap: 3px;
+        font-size: 12px;
+    }
+
+    aside .navBlock {
+        font-size: 12px;
+        min-width: 100px;
+    }
+
+    aside .navBlock svg {
+        margin-left: 15px;
+        width: 20px;
+        height: 20px;
+    }
+    aside .navBlock.active svg {
+        margin-left: 12px;
+    }
+    .about p {
+        font-size: 13px;
+    }
+    main .myContainer {
+        margin: 20px;
+    }
+    main .myContainer .textBlock {
+        font-size: 15px;
+    }
+    .myContainer .textBlock ol {
+        padding-left: 10px;
+    }
+
+    .notesBlock .subheading {
+        font-size: 14px;
+    }
+
+    .notesBlock .heading {
+        font-size: 16px;
+    }
+    
+    .notesBlock .text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 780px) {
+    .chartBlock {
+        flex-direction: column;
+    }
+    .sliders {
+        border-right: none;
+    }
+    .about p {
+        min-width: 300px;
+        max-width: none;
+        width: 100vw;
+    }
+
+    header .headline {
+        font-size: 20px;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    header .entity {
+        gap: 10px;
+        padding: 0px 10px;
+        font-size: 12px;
+    }
+    header .globe {
+        padding: 5px;
+    }
+
+    header .profile {
+        padding-left: 10px;
+        font-size: 12px;
+        gap: 5px;
+    }
+    header .profile svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    main .myContainer {
+        margin: 10px;
+    }
+
+    main .myContainer .textBlock {
+        font-size: 12px;
+        margin: 5px;
+    }
+    .myPagination .previous, .myPagination .next, .myPagination .pages p {
+        font-size: 10px;
+    }
+    .myPagination .previous p, .myPagination .next p {
+        display: none;
+    }
+    .myPagination .pages p {
+        width: 18px;
+        height: 18px;
+        gap: 0px;
+    }
+}
